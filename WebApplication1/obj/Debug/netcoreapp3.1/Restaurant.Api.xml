@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Restaurant.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Restaurant.Api.Controllers.RestaurantController">
+            <summary>
+            Endpoint relacionado a restaurante
+            </summary>
+        </member>
+        <member name="M:Restaurant.Api.Controllers.RestaurantController.OpenRestaurants(System.String)">
+            <summary>
+            Verifica restaurantes abertos
+            </summary>
+            <param name="hora"></param>Informe no formato HH:MM sendo HH entre 1 e 24 e MM entre 00 e 60
+            <response code="200">Sucesso ao buscar restaurantes abertos</response> Encontrou restaurantes abertos com sucesso
+            <responde code="500"></responde> Ocorreu um erro ao buscar restaurantes abertos
+        </member>
+        <member name="P:Restaurant.Api.Restaurant.Name">
+            <summary>
+            Nome dos restaurantes abertos
+            </summary>
+        </member>
+        <member name="T:Restaurant.Api.Services.BaseServices">
+            <summary>
+            Classe com objetivo de ter serviços base para a api
+            </summary>
+        </member>
+        <member name="M:Restaurant.Api.Services.BaseServices.RetornarErro">
+            <summary>
+            Retorna o erro para ser exibido
+            </summary>
+            <returns>Um ou mais erros gerado durante o processo</returns>
+        </member>
+        <member name="P:Restaurant.Api.Services.BaseServices.PossuiErro">
+            <summary>
+            Verifica se possui erro na lista
+            </summary>
+        </member>
+        <member name="T:Restaurant.Api.Services.BuscaRestaurantes">
+            <summary>
+            Classe para tratar do processo de buscar restaurants abertos
+            </summary>
+        </member>
+        <member name="M:Restaurant.Api.Services.BuscaRestaurantes.LerArquivo(System.String)">
+            <summary>
+            Metodo faz todo processo de validação e leitura do arquivo CSV
+            </summary>
+            <param name="hora"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Restaurant.Api.Services.BuscaRestaurantes.ValidaHora(System.String)">
+            <summary>
+            Metodo faz a validação das horas permitidas
+            </summary>
+            <param name="hora"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Restaurant.Api.Services.ErroApp">
+            <summary>
+            Classe gerencia o processo de erro
+            </summary>
+        </member>
+        <member name="T:Restaurant.Api.Services.ErroService">
+            <summary>
+            Classe utilizada para para fazer o processo de adicionar os erros na lista
+            </summary>
+        </member>
+        <member name="M:Restaurant.Api.Services.ErroService.AddErro(System.Collections.Generic.List{Restaurant.Api.Services.ErroApp},System.String)">
+            <summary>
+            Metodo Faz o processo de adicionar codErro
+            </summary>
+            <param name="obj"></param>
+            <param name="codErro"></param>
+        </member>
+        <member name="M:Restaurant.Api.Services.ErroService.AddErro(System.Collections.Generic.List{Restaurant.Api.Services.ErroApp},System.String,System.String)">
+            <summary>
+            Metodo Faz o processo de adicionar codErro + mensagem
+            </summary>
+            <param name="obj"></param>
+            <param name="codErro"></param>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Restaurant.Api.Services.ErroService.ErroJaAdiciona(System.Collections.Generic.List{Restaurant.Api.Services.ErroApp},System.String)">
+            <summary>
+            Verifica se o erro já foi adicionado
+            </summary>
+            <param name="obj"></param>
+            <param name="codErro"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

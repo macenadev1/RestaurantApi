@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication1</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication1.Controllers.RestauranteController">
+            <summary>
+            Endpoint relacionado a restaurante
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Controllers.RestauranteController.OpenRestaurants(System.String)">
+            <summary>
+            Verifica restaurantes abertos
+            </summary>
+            <param name="hora"></param>Informe no formato HH:MM sendo HH entre 1 e 24 e MM entre 00 e 60
+            <response code="200">Sucesso ao buscar restaurantes abertos</response> Encontrou restaurantes abertos com sucesso
+            <responde code="500"></responde> Ocorreu um erro ao buscar restaurantes abertos
+        </member>
+        <member name="P:WebApplication1.Restaurant.Name">
+            <summary>
+            Nome dos restaurantes abertos
+            </summary>
+        </member>
+        <member name="M:WebApplication1.Services.BaseServices.RetornarErro">
+            <summary>
+            Retorna o erro para ser exibido
+            </summary>
+            <returns>Um ou mais erros gerado durante o processo</returns>
+        </member>
+    </members>
+</doc>
