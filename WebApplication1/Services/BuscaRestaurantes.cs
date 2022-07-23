@@ -59,10 +59,10 @@ namespace Restaurant.Api.Services
                         while (!csvReader.EndOfData)
                         {
                             string[] fields = csvReader.ReadFields();
-                            var splitTeste = fields[1].Split("-");
+                            var splitHora = fields[1].Split("-");
 
-                            DateTime horaInicial = DateTime.Parse(splitTeste[0]);
-                            DateTime horaFinal = DateTime.Parse(splitTeste[1]);
+                            DateTime horaInicial = DateTime.Parse(splitHora[0]);
+                            DateTime horaFinal = DateTime.Parse(splitHora[1]);
 
                             bool restauranteAberto = horaBuscaRestaurantes >= horaInicial && horaBuscaRestaurantes <= horaFinal;
 
