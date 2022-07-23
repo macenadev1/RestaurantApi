@@ -16,7 +16,7 @@ Api para buscar restaurantes abertos na hora informada
  - Regras para o parâmetro: HH entre 1 e 24 e MM entre 00 e 60
  - Status de retorno: 200 sucesso, 500 ocorreu algum erro
  - Retorno metodo: Um array de json com os nomes dos restaurantes abertos
-Exemplo de requisição: https://localhost:44371/v1/Restaurante/OpenRestaurants?hora=15:20
+Exemplo de requisição: https://localhost:44371/v1/Restaurant/OpenRestaurants?hora=15:20
 Exemplo de retorno: [ {"name": "Kushi Tsuru" }, {"name": "Alioto" }]
 
 ## Mensagens de erros (códigos e descrições):
